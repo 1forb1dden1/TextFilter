@@ -1,3 +1,8 @@
+//Creator: Not Me
+//Created: 5/8/2022 5:48PM
+//Last Updated: 5/10/2022 2:54 AM
+//Worked on: Implemented a hashmap to store the index of words.
+//Description: AVL Tree implementation with a struct that stores data.
 #include <iostream>
 #include <deque>
 #include <iomanip>
@@ -23,9 +28,8 @@ struct tdata
   int totalWords = 0;
   int uniqueWords = 0;
   int uniqueWordsThreeLetterMore = 0;
-  //excludes spaces and punctuations.
   int totalCharacter = 0;
-  std::map<std::string, int> WordCount;
+  std::map<std::string, int> AllWord;
 };
 
 template <class xtype>
@@ -45,6 +49,7 @@ public:
   int getUniqueWords();
   int getUniqueWordsThreeLetterMore();
   int getTotalCharacter();
+  std::map<std::string, int> getAllWord();
   bool isEmpty();
   void rotateLeft(tnode<xtype>*&);
   void rotateRight(tnode<xtype>*&);
