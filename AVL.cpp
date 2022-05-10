@@ -121,6 +121,12 @@ int AVLtree<xtype> ::getTotalCharacter()
   return data.totalCharacter;
 }
 template <class xtype>
+std::map<std::string, int> AVLtree<xtype> ::getAllWord()
+{
+  return data.AllWord;
+}
+
+template <class xtype>
 AVLtree<xtype> ::AVLtree(const AVLtree<xtype>& other)
 {
   if (other.root == NULL)
@@ -271,13 +277,15 @@ void AVLtree<xtype>::insertNode(tnode<xtype>*& p, std::string item, bool& taller
     data.uniqueWords += 1;
     data.totalCharacter += item.length();
     item.length() > 3 ? data.uniqueWordsThreeLetterMore += 1 : data.uniqueWordsThreeLetterMore += 0;
+    data.AllWord[item] = data.AllWord[item] + 1;
   }
   else if (p->info == item)
   {
     // word is not unique
-    std::cout << item << std::endl;
+    //std::cout << item << std::endl;
     data.totalWords += 1;
     data.totalCharacter += item.length();
+    data.AllWord[item] = data.AllWord[item] + 1;
   }
   else if (p->info > item)
   {
