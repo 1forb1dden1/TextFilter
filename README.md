@@ -16,4 +16,4 @@ Style Warning:
 2. Average Sentence length too long.
 3. Average Word Length too long.
 # Example
-![image](https://user-images.githubusercontent.com/90816621/167572540-fa10e691-8c88-4f0c-8301-792c78066fe8.png)
+<img src=https://user-images.githubusercontent.com/90816621/167572902-fca9f9f4-bbda-4f67-8833-6fe9bb3044f0.png width="500" height ="450">
